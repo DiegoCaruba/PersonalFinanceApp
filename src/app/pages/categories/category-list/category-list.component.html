@@ -35,7 +35,7 @@
       </td>
       <td>
         <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
-        <a (action)="alert('excluir')" class="btn btn-outline-danger btn-sm mr-2">Excluir</a>
+        <a (click)="deleteCategory(category)" class="btn btn-outline-danger btn-sm mr-2">Excluir</a>
       </td>
     </tr>
     

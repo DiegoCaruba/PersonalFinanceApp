@@ -18,8 +18,20 @@ export class CategoryListComponent implements OnInit {
   ngOnInit() {
     this.categoryService.getAll().subscribe(  
       categories => this.categories = categories,
-      error => alert('Erro ao listar alertas')
+      () => alert('Erro ao listar alertas!')
     )
+  }
+
+  deleteCategory(category) {
+    const mustDelete = confirm('Deseja realmente excluir este item?')
+
+    if (mustDelete) {
+      this.categoryService.delete(category.id).subscribe(
+        () => this.categories = this.categories.filter(element => element != category),
+        () => alert('Erro ao tentar excluir!')
+      )
+    }
+    
   }
 
 }

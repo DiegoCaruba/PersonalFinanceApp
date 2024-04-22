@@ -28,14 +28,13 @@
   </thead>
   <tbody>
 
-    <!-- <tr **ngFor="let category of categories"> -->
-    <tr>
+    <tr *ngFor="let category of categories">
       <td>
-        <strong>Lazer</strong><br>
-        <small>descrição</small>
+        <strong>{{category.name}}</strong><br>
+        <small>{{category.description}}</small>
       </td>
       <td>
-        <a [routerLink]="[12, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+        <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
         <a (action)="alert('excluir')" class="btn btn-outline-danger btn-sm mr-2">Excluir</a>
       </td>
     </tr>

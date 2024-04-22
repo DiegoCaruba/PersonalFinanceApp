@@ -27,15 +27,18 @@
     </tr>
   </thead>
   <tbody>
+
+    <!-- <tr **ngFor="let category of categories"> -->
     <tr>
       <td>
         <strong>Lazer</strong><br>
-        <small>Cinema, parque, praia, etc</small>
+        <small>descrição</small>
       </td>
       <td>
-        <a [routerLink]="[12, 'edit ']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+        <a [routerLink]="[12, 'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
         <a (action)="alert('excluir')" class="btn btn-outline-danger btn-sm mr-2">Excluir</a>
       </td>
     </tr>
+    
   </tbody>
 </table>
